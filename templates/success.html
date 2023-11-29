@@ -1,0 +1,28 @@
+<!-- storeapp/templates/success.html -->
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Success</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'logout' %}">Logout</a></li> <!-- Add logout link -->
+            </ul>
+        </nav>
+    </header>
+
+    <div class="content">
+        <h2>{{ message }}</h2>
+
+        <!-- Add a link to return to the home page -->
+        <p><a href="{% url 'home' %}">Return to Home Page</a></p>
+    </div>
+</body>
+</html>
