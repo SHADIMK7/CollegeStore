@@ -90,6 +90,7 @@ class UserInformationView(View):
             materials_provided=', '.join(materials_provide)
         )
 
+        
         confirmation_message = "Order Confirmed"
         return render(request, 'user_information.html', {'confirmation_message': confirmation_message})
 
